@@ -1,0 +1,15 @@
+---
+import Perk from "./Perk.astro";
+import type { Props as PerkProps } from "./Perk.astro";
+import * as styles from "./index.css";
+
+export type Props = {
+  perks: PerkProps[];
+}
+
+const { perks } = Astro.props as Props;
+---
+
+<dl class={styles.perkCollection}>
+  {perks.map(perk => <Perk {...perk} />)}
+</dl>

@@ -1,0 +1,37 @@
+---
+import * as styles from "./index.css";
+import type { AstroBuiltinAttributes } from "astro";
+
+type Logo = {
+  href: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  label?: string;
+}
+
+export type Props = {
+  type: "cards" | "flow";
+  logos: Logo[];
+  mountClasses?: AstroBuiltinAttributes["class:list"];
+}
+
+const { logos, mountClasses, type } = Astro.props as Props;
+---
+
+<ul class:list={[mountClasses, styles.logos]}>
+  {logos.map(logo => {
+    const { href, image } = logo;
+    const { src, alt } = image;
+
+    return (
+      <li class={styles.logo}>
+        <a href={href} target={"_blank"}>
+          <img class={styles.image} src={src} alt={alt}
+            width={160} height={80} />
+        </a>
+      </li>
+    );
+  })}
+</ul>

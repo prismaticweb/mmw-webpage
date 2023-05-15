@@ -1,0 +1,36 @@
+---
+import * as styles from "./index.css";
+import type { AstroBuiltinAttributes } from "astro";
+
+export type Props = {
+  members: {
+    name: string;
+    role: string;
+    image: {
+      src: string;
+      alt: string;
+    };
+    description: string;
+  }[];
+  mountClasses?: AstroBuiltinAttributes["class:list"];
+}
+
+const { members, mountClasses } = Astro.props as Props;
+---
+
+<ul class:list={[mountClasses, styles.members]}>
+  {members.map(member => {
+    return (
+      <li class={styles.member}>
+        <div class={styles.imageContainer}>
+          <img class={styles.image} {...member.image} width="240" height="240" />
+        </div>
+        <p class={styles.name} set:text={member.name} />
+        <p class={styles.roleWrapper}>
+          <small class={styles.role} set:text={member.role} />
+        </p>
+        <p class={styles.description} set:text={member.description} />
+      </li>
+    )
+  })}
+</ul>

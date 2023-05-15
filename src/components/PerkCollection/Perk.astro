@@ -1,0 +1,24 @@
+---
+import * as styles from "./index.css";
+
+export type Props = {
+  description: string;
+  icon: {
+    alt: string;
+    src: string;
+  };
+  label?: string;
+}
+
+const { description, icon, label } = Astro.props as Props;
+---
+
+<div class={styles.perk}>
+  <dt class={styles.header}>
+    <img {...icon} width={80} height={80} />
+    {label ? (
+      <p class={styles.labelWrapper}><strong class={styles.label} set:html={label} /></p>
+    ) : null}
+  </dt>
+  <dd class={styles.description} set:html={description} />
+</div>

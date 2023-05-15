@@ -1,0 +1,26 @@
+---
+import { default as InlineHeader, Props as InlineHeaderProps } from "@components/InlineHeader/index.astro";
+import { default as Link, Props as LinkProps } from "@components/Link/index.astro";
+
+export type Props = {
+  type?: "article" | "section";
+  header?: InlineHeaderProps;
+  link?: LinkProps;
+  followUp?: string;
+}
+
+const { followUp, header, link, type = "article" } = Astro.props as Props;
+
+const Segment = type;
+---
+
+<Segment>
+  {header ? <InlineHeader {...header} /> : null}
+  <slot />
+  {followUp || link ? (
+    <div>
+      {followUp ? <article set:html={followUp} /> : null}
+      {link ? <p><Link {...link} /></p> : null}
+    </div>
+  ) : null}
+</Segment>

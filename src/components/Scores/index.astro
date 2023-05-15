@@ -1,0 +1,69 @@
+---
+import * as styles from "./index.css";
+
+export type Props = {
+  scores: {
+    label: string;
+    type: "absolute" | "relative";
+    value: number;
+    description?: string;
+    icon?: string;
+    suffix?: string;
+  }[]
+}
+
+const { scores } = Astro.props as Props;
+
+function relative(num: number): string {
+  return `${num}%`
+}
+
+//TODO: refactor
+function absolute(num: number): string | string[] {
+  const arr = Array.from(String(num)).reverse();
+  const res = [];
+
+  if(num > 9999) {
+    const formatter = Intl.NumberFormat("de", { notation: "compact", compactDisplay: "short" });
+
+    return formatter.format(num);
+  }
+
+  for(let i = arr.length -1; i >= 0; i--) {
+    if(i % 3 === 0 && i > 0) {
+      res.push(`${arr[i]}.`)
+    } else {
+      res.push(arr[i])
+    }
+  }
+  return res;
+}
+
+function format(num: number, type: "absolute" | "relative"): string | string[] {
+  if(type === "absolute") {
+    return absolute(num);
+  }
+  else if(type === "relative") {
+    return relative(num);
+  } else {
+    return num.toString();
+  } 
+}
+---
+
+<dl class={styles.scores}>
+  {scores.map(score => {
+    const { description, icon, label, suffix, type, value } = score;
+
+    return (
+      <div class={styles.score}>
+        <dt class={styles.label} set:text={label} />
+        <dd class={styles.value}>
+          {icon ? (<div style={`--bg-image: url(${icon})`} />) : null}
+          <span set:text={format(value, type)} />{suffix ? <span class={styles.suffix} set:text={suffix} /> : null}
+        </dd>
+        {description ? <dd class={styles.description} set:html={description} /> : null}
+      </div>
+    );
+  })}
+</dl>

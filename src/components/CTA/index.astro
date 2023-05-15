@@ -1,0 +1,29 @@
+---
+import * as styles from "./index.css";
+
+import { default as ShortTag, Props as ShortTagProps } from "@components/ShortTag/index.astro";
+import { default as Link, Props as LinkProps } from "@components/Link/index.astro";
+
+export type Props = {
+  strapline: string;
+  link?: LinkProps;
+  shortTag?: ShortTagProps;
+}
+
+const { strapline, link, shortTag } = Astro.props as Props;
+---
+
+<article class={styles.cta}>
+  <div class={styles.contentWrapper}>
+    <div>
+      {shortTag ? <ShortTag {...shortTag} /> : null}
+      <p class={styles.content} set:html={strapline} />
+      {link ? <p class={styles.linkWrapper}><Link {...link} /></p> : null}
+    </div>
+    <div>
+      <div>
+
+      </div>
+    </div>
+  </div>
+</article>

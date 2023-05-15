@@ -1,0 +1,20 @@
+---
+import type { AstroBuiltinAttributes } from 'astro';
+
+export type Props = {
+  quote: string;
+  cite?: string;
+  mountClasses?: AstroBuiltinAttributes["class:list"];
+}
+
+const { cite, mountClasses, quote } = Astro.props as Props;
+---
+
+{cite ? (
+  <figure class:list={[mountClasses]}>
+    <blockquote set:html={quote} />
+    <figcaption set:html={cite} />
+  </figure>
+) : (
+  <blockquote class:list={[mountClasses]} set:html={quote} />
+)}

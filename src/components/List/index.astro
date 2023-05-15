@@ -1,0 +1,24 @@
+---
+import type { AstroBuiltinAttributes } from "astro";
+
+type ListType = "ordered" | "unordered";
+
+export type Props = {
+  items: string[];
+  mountClasses?: AstroBuiltinAttributes["class:list"];
+  type: ListType;
+}
+
+const { items, mountClasses, type } = Astro.props as Props;
+
+function list(type: ListType) {
+  const lists = new Map([["ordered", "ol"], ["unordered", "ul"]]);
+  return lists.get(type) as "ol" | "ul";
+}
+
+const List = list(type);
+---
+
+<List class:list={[mountClasses]}>
+  {items.map((item) => <li set:html={item} />)}
+</List>

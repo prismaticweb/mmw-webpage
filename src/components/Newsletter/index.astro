@@ -1,0 +1,22 @@
+---
+import { default as H, Props as HProps } from "@components/H/index.astro";
+import type { AstroBuiltinAttributes } from "astro";
+
+export type Props = {
+  title: HProps;
+  tagline?: string;
+  mountClasses?: AstroBuiltinAttributes["class:list"];
+};
+
+const { mountClasses, title, tagline } = Astro.props as Props;
+---
+
+<article class:list={[mountClasses]}>
+  <hgroup>
+    <H {...title} />
+    {tagline ? (
+      <p set:html={tagline} />
+    ) : null}
+  </hgroup>
+  <img width={42} height={42} />
+</article>

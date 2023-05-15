@@ -1,0 +1,45 @@
+---
+import { default as Link, Props as LinkProps } from "@components/Link/index.astro";
+import * as styles from "./index.css";
+import type { AstroBuiltinAttributes } from "astro";
+
+export type Props = {
+  image: {
+    alt: string;
+    src: string;
+  };
+  tagline: string;
+  title: string;
+  ctas?: {
+    primary?: LinkProps;
+    secondary?: LinkProps;
+  };
+  mountClasses?: AstroBuiltinAttributes["class:list"],
+}
+
+const { ctas, image, mountClasses, tagline, title } = Astro.props as Props;
+---
+
+<article class:list={[styles.hero, mountClasses]}>
+  <div class={styles.contentWrapper}>
+    <div class={styles.body}>
+      <hgroup>
+        <h1 class={styles.title} set:html={title} />
+        <p class={styles.tagline} set:html={tagline} />
+      </hgroup>
+      {ctas && ( ctas.primary || ctas.secondary ) ? (
+        <div class={styles.ctas}>
+          {ctas.primary ? <Link {...ctas.primary} /> : null}
+          {ctas.secondary ? <Link {...ctas.secondary} /> : null}
+        </div>
+      ) : null}
+    </div>
+    <div class={styles.imageContainer}>
+      <img class={styles.image}
+        src={image.src}
+        alt={image.alt}
+        width="400" height="400" />
+    </div>
+  </div>
+  <slot />
+</article>

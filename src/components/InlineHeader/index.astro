@@ -1,0 +1,21 @@
+---
+import { default as H, Props as HProps } from "@components/H/index.astro";
+import { default as ShortTag, Props as ShortTagProps } from "@components/ShortTag/index.astro";
+import * as styles from "./index.css";
+import type { AstroBuiltinAttributes } from "astro";
+
+export type Props = {
+  title: HProps;
+  mountClasses?: AstroBuiltinAttributes["class:list"];
+  shortTag?: ShortTagProps;
+  tagline?: string;
+}
+
+const { mountClasses, shortTag, tagline, title } = Astro.props as Props;
+---
+
+<article class:list={[mountClasses]}>
+  {shortTag ? <ShortTag {...shortTag} /> : null}
+  <H {...title} class={styles.title}  />
+  {tagline ? <p class={styles.tagline} set:html={tagline} /> : null}
+</article>

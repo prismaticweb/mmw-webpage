@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export type Props = Omit<HTMLAttributes<"h1" | "h2" | "h3" | "h4" | "h5" | "h6">, "slot"> &
+{
+  content: string;
+  level: 1 | 2 | 3 | 4 | 5 | 6;
+};
+
+const { content, level, [`class`]: className, [`class:list`]: classNameList, ...attrs } = Astro.props as Props;
+
+const Hx = `h${level}`;
+---
+
+<Hx
+  class:list={[classNameList, className]}
+  {...attrs}
+  set:html={content} />

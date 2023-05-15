@@ -1,15 +1,361 @@
 ---
+import { default as Entry, Props as EntryProps } from "@layouts/Entry/index.astro";
+import { default as Hero, Props as HeroProps } from "@components/Hero/index.astro";
+import { default as Logos, Props as LogoProps } from "@components/Logos/index.astro";
+import { default as Scores, Props as ScoresProps } from "@components/Scores/index.astro";
+import { default as Segment, Props as SegmentProps } from "@layouts/Segment/index.astro";
+import { default as CTA, Props as CTAProps } from "@components/CTA/index.astro";
+import { default as Promotion, Props as PromotionProps } from "@components/Promotion/index.astro"; 
+import { default as Newsletter, Props as NewsletterProps } from "@components/Newsletter/index.astro";
+import { default as Testimonial, Props as TestimonialProps } from "@components/Testimonial/index.astro";
+import { default as CardCollection, Props as CardCollectionProps } from "@components/CardCollection/index.astro";
+import { default as Storyline, Props as StorylineProps } from "@components/Storyline/index.astro";
+import { default as PerkCollection, Props as PerkCollectionProps } from "@components/PerkCollection/index.astro";
+
+const hero: HeroProps = {
+  ctas: {
+    primary: {
+      href: "/",
+      label: "Los gehts"
+    },
+    secondary: {
+      href: "/",
+      label: "Zum Referenzvideo"
+    }
+  },
+  image: {
+    alt: "",
+    src: ""
+  },
+  tagline: `
+    Wir gestalten Berufsorientierung so, wie wir sie als Schüler selbst gern erlebt hätten:
+    <strong>motivierend, einfach & persönlich</strong>.`,
+  title: `Die <strong>moderne Berufsorientierung</strong> für Ihre Schüler:innen`
+}
+
+const logos01: LogoProps = {
+  logos: [
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+  ],
+  type: "flow"
+}
+
+const segment01: SegmentProps = {
+  header: {
+    title: {
+      content: `<strong>7 von 10 jungen</strong> Menschen fühlen sich bei der Berufsauswahl alleine gelassen.`,
+      level: 2
+    },
+    shortTag: {
+      content: "Das Problem"
+    }
+  }
+}
+
+const scores: ScoresProps = {
+  scores: [
+    {
+      label: "Schulen",
+      type: "absolute",
+      value: 150,
+    },
+    {
+      label: "Schüler:innen",
+      type: "absolute",
+      value: 17000,
+    },
+    {
+      label: "Empfehlungen",
+      type: "relative",
+      value: 98,
+    },
+  ]
+}
+
+const segment02: SegmentProps = {
+  header: {
+    title: {
+      content: `Moderne Berufsorientierung von <strong>jungen Menschen</strong> für <strong>junge Menschen</strong>.`,
+      level: 2
+    },
+    shortTag: {
+      content: "Unsere Lösung"
+    },
+    tagline: `Wir machen Berufsorientierung so, wie wir es uns als Schüler:innen selbst gewünscht hätten: auf Augenhöhe, motivierend und praxisnah.`
+  }
+}
+
+const promotion: PromotionProps = {
+
+}
+
+const cta01: CTAProps = {
+  strapline: "Moderne Berufsorientierung von jungen Menschen für junge Menschen.",
+  link: {
+    href: "/",
+    label: "Jetzt Informieren"
+  }
+}
+
+const segment03: SegmentProps = {
+  header: {
+    title: {
+      content: `Unsere <strong>Bausteine</strong> für moderne Berufsorientierung`,
+      level: 2
+    },
+    shortTag: {
+      content: "Das Mutmacher-Konzept"
+    }
+  }
+}
+
+const perkCollection: PerkCollectionProps = {
+  perks: [
+    {
+      description: `Motivationspush und Aktivierung:
+        Wir nehmen alle Schüler mit und machen Lust auf die Zukunft.`,
+      label: "Motivierend und aktivierend",
+      icon: {
+        alt: "",
+        src: ""
+      }
+    },
+    {
+      description: `Motivationspush und Aktivierung:
+        Wir nehmen alle Schüler mit und machen Lust auf die Zukunft.`,
+      label: "Motivierend und aktivierend",
+      icon: {
+        alt: "",
+        src: ""
+      }
+    },
+    {
+      description: `Motivationspush und Aktivierung:
+        Wir nehmen alle Schüler mit und machen Lust auf die Zukunft.`,
+      label: "Motivierend und aktivierend",
+      icon: {
+        alt: "",
+        src: ""
+      }
+    },
+    {
+      description: `Motivationspush und Aktivierung:
+        Wir nehmen alle Schüler mit und machen Lust auf die Zukunft.`,
+      label: "Motivierend und aktivierend",
+      icon: {
+        alt: "",
+        src: ""
+      }
+    },
+    {
+      description: `Motivationspush und Aktivierung:
+        Wir nehmen alle Schüler mit und machen Lust auf die Zukunft.`,
+      label: "Motivierend und aktivierend",
+      icon: {
+        alt: "",
+        src: ""
+      }
+    },
+    {
+      description: `Motivationspush und Aktivierung:
+        Wir nehmen alle Schüler mit und machen Lust auf die Zukunft.`,
+      label: "Motivierend und aktivierend",
+      icon: {
+        alt: "",
+        src: ""
+      }
+    },
+  ]
+}
+
+const segment04: SegmentProps = {
+  header: {
+    title: {
+      content: `Diese <strong>Vorteile</strong> bieten Wir Ihnen, Ihrer Schule und Ihren Schüler:innen`,
+      level: 2
+    },
+    shortTag: {
+      content: "Unsere Vorteile"
+    }
+  }
+}
+
+const storyline: StorylineProps = {
+
+}
+
+const cta02: CTAProps = {
+  shortTag: {
+    content: "Kostenloses Gespräch"
+  },
+  strapline: "Jetzt persönliches Gespräch vereinbaren",
+  link: {
+    href: "/",
+    label: "Rückruf vereinbaren"
+  }
+}
+
+const segment05: SegmentProps = {
+  header: {
+    title: {
+      content: `Unsere Arbeit hat das Leben von Ducnam, Theresa & Valentin verändert.`,
+      level: 2
+    },
+    shortTag: {
+      content: "Das sagen Schüler:innen"
+    },
+    tagline: `
+      Gemeinsam erreichte Ziele wie einen <strong>Ausbildung- oder Studienplatz oder neu gefundene
+      Lebensfreude</strong>: Unser Konzept funktioniert. Schauen Sie sich unsere Erfogsstories an
+      und überzeugen Sie sich selbst.
+    `
+  },
+  link: {
+    href: "/",
+    label: "Zu den Referenzen"
+  }
+}
+
+const cardCollection: CardCollectionProps = {
+
+}
+
+const segment06: SegmentProps = {
+  header: {
+    title: {
+      content: `Unsere mutigen Partnerschaften`,
+      level: 2
+    },
+    shortTag: {
+      content: "Partner"
+    },
+    tagline: `Gemeinsam erreichte Ziele wie einen Ausbildung- oder Studienplatz oder neu gefundene Lebensfreude: Unser Konzept funktioniert.`
+  },
+  link: {
+    href: "/",
+    label: "Zu den Referenzen"
+  }
+}
+
+const testimonial: TestimonialProps = {
+
+}
+
+const segment07: SegmentProps = {
+  header: {
+    title: {
+      content: `Ausgezeichneter Bildungsträger`,
+      level: 2
+    },
+    shortTag: {
+      content: "Von Expert:innen entwickelt"
+    }
+  },
+  link: {
+    href: "/",
+    label: "Zu den Referenzen"
+  }
+}
+
+const logos02: LogoProps = {
+  logos: [
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+    {
+      href: "/",
+      image: {
+        alt: "",
+        src: "https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
+      }
+    },
+  ],
+  type: "cards"
+}
+
+const newsletter: NewsletterProps = {
+  title: {
+    content: "Bleibe auf dem laufenden",
+    level: 2
+  }
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Entry title="Startseite" description="" url="" header={{}} footer={{}}>
+  <Fragment slot="before">
+    <Hero {...hero}>
+      <Logos {...logos01} />
+    </Hero>
+  </Fragment>
+  <Segment {...segment01}>
+    <Scores {...scores} />
+  </Segment>
+  <Segment {...segment02}>
+    <Promotion {...promotion} />
+  </Segment>
+  <CTA {...cta01} />
+  <Segment {...segment03}>
+    <PerkCollection {...perkCollection} />
+  </Segment>
+  <Segment {...segment04}>
+    <Storyline {...storyline} />
+  </Segment>
+  <CTA {...cta02} />
+  <Segment {...segment05}>
+    <CardCollection {...cardCollection} />
+  </Segment>
+  <Segment {...segment06}>
+    <Testimonial {...testimonial} />
+  </Segment>
+  <Fragment slot="after">
+    <Segment {...segment07}>
+      <Logos {...logos02} />
+    </Segment>
+    <Newsletter {...newsletter} />
+  </Fragment>
+</Entry>

@@ -1,0 +1,15 @@
+---
+import { default as SocialMedia, Props as SocialMediaProps } from "./SocialMedia.astro";
+import { default as Testimonial, Props as TestimonialProps } from "./Testimonial.astro";
+import { default as VideoTeaser, Props as VideoTeaserProps } from "./VideoTeaser.astro";
+import type { AstroBuiltinAttributes } from "astro";
+
+export type Props = {
+  mountClasses?: AstroBuiltinAttributes["class:list"];
+}
+
+const { mountClasses } = Astro.props as Props;
+---
+
+<ul class:list={[mountClasses]}>
+</ul>

@@ -1,0 +1,302 @@
+[
+  {
+    "region": "Bayern",
+    "school": "Veit Höser Gymnasium Bogen"
+  },
+  {
+    "region": "Bayern",
+    "school": "Johannes-Gutenberg-Gymnasium Waldkirchen"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gymnasium Zwiesel"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gymnasium Landau an der Isar"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gisela-Gymnasium Passau"
+  },
+  {
+    "region": "Bayern",
+    "school": "Karl-Ernst-Gymnasium Amorbach"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gymnasium Neustadt an der Waldnaab"
+  },
+      {
+    "region": "Bayern",
+    "school": "Veit Höser Gymnasium Bogen"
+  },
+  {
+    "region": "Bayern",
+    "school": "Johannes-Gutenberg-Gymnasium Waldkirchen"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gymnasium Zwiesel"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gymnasium Landau an der Isar"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gisela-Gymnasium Passau"
+  },
+  {
+    "region": "Bayern",
+    "school": "Karl-Ernst-Gymnasium Amorbach"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gymnasium Neustadt an der Waldnaab"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "Gymnasium Alexandrinum Coburg"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "FOS / BOS Ansbach"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "Gymnasium Bruckmühl"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "Landgraf-Leuchtenberg Realschule Osterhofen"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "Jacob Curio Realschule Hofheim"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "Theodolinden Gymnasium München"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "St. Gotthard Gymnasium der Benediktiner Niederaltaich"
+  },
+      {
+    "region": "Hamburg",
+    "school": "Franz-Marc-Gymnasium Markt Schwaben"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Gymnasium Lappersdorf"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Hans Sachs Gymnasium Nürnberg"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Gymnasium Landau an der Isar"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Gymnasium Leopoldinum Passau"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Simon-Marius-Gymnasium Gunzenhausen"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Klenze Gymnasium München-Sendling"
+  },
+  {
+    "region": "Bayern",
+    "school": "Gymnasium München"
+  },
+  {
+    "region": "Niedersachsen",
+    "school": "Gesamtschule Hannover"
+  },
+  {
+    "region": "Baden-Württemberg",
+    "school": "Grundschule Stuttgart"
+  },
+  {
+    "region": "Hessen",
+    "school": "Berufsschule Frankfurt"
+  },
+  {
+    "region": "Berlin",
+    "school": "Realschule Berlin"
+  },
+  {
+    "region": "Sachsen",
+    "school": "Oberschule Leipzig"
+  },
+  {
+    "region": "Brandenburg",
+    "school": "Grundschule Potsdam"
+  },
+  {
+    "region": "Rheinland-Pfalz",
+    "school": "Berufsbildende Schule Mainz"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "Gesamtschule Köln"
+  },
+  {
+    "region": "Schleswig-Holstein",
+    "school": "Grundschule Kiel"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Gymnasium Hamburg"
+  },
+  {
+    "region": "Saarland",
+    "school": "Gesamtschule Saarbrücken"
+  },
+  {
+    "region": "Thüringen",
+    "school": "Gymnasium Erfurt"
+  },
+  {
+    "region": "Mecklenburg-Vorpommern",
+    "school": "Berufliches Gymnasium Rostock"
+  },
+  {
+    "region": "Bayern",
+    "school": "Realschule Augsburg"
+  },
+  {
+    "region": "Niedersachsen",
+    "school": "Gymnasium Oldenburg"
+  },
+  {
+    "region": "Baden-Württemberg",
+    "school": "Berufliches Gymnasium Freiburg"
+  },
+  {
+    "region": "Hessen",
+    "school": "Gesamtschule Wiesbaden"
+  },
+  {
+    "region": "Berlin",
+    "school": "Grundschule Berlin-Mitte"
+  },
+  {
+    "region": "Sachsen",
+    "school": "Gymnasium Chemnitz"
+  },
+  {
+    "region": "Brandenburg",
+    "school": "Oberschule Cottbus"
+  },
+  {
+    "region": "Rheinland-Pfalz",
+    "school": "Berufsbildende Schule Koblenz"
+  },
+  {
+    "region": "Nordrhein-Westfalen",
+    "school": "Gymnasium Dortmund"
+  },
+  {
+    "region": "Schleswig-Holstein",
+    "school": "Berufsschule Flensburg"
+  },
+  {
+    "region": "Hamburg",
+    "school": "Gesamtschule Hamburg-Nord"
+  },
+  {
+    "region": "Saarland",
+    "school": "Berufsschule Saarlouis"
+  },
+  {
+    "region": "Thüringen",
+    "school": "Gesamtschule Jena"
+  },
+  {
+    "region": "Berlin",
+    "school": "Realschule Berlin"
+  },
+  {
+    "region": "Berlin",
+    "school": "Grundschule Berlin-Mitte"
+  },
+  {
+    "region": "Berlin",
+    "school": "Gymnasium Berlin-Prenzlauer Berg"
+  },
+  {
+    "region": "Berlin",
+    "school": "Oberschule Berlin-Neukölln"
+  },
+  {
+    "region": "Berlin",
+    "school": "Berufsschule Berlin-Kreuzberg"
+  },
+  {
+    "region": "Berlin",
+    "school": "Gesamtschule Berlin-Charlottenburg"
+  },
+  {
+    "region": "Berlin",
+    "school": "Grundschule Berlin-Pankow"
+  },
+  {
+    "region": "Berlin",
+    "school": "Gymnasium Berlin-Neukölln"
+  },
+  {
+    "region": "Berlin",
+    "school": "Realschule Berlin-Tempelhof"
+  },
+  {
+    "region": "Berlin",
+    "school": "Berufliches Gymnasium Berlin-Lichtenberg"
+  },
+  {
+    "region": "Berlin",
+    "school": "Oberschule Berlin-Mitte"
+  },
+  {
+    "region": "Berlin",
+    "school": "Gesamtschule Berlin-Kreuzberg"
+  },
+  {
+    "region": "Berlin",
+    "school": "Grundschule Berlin-Friedrichshain"
+  },
+  {
+    "region": "Berlin",
+    "school": "Gymnasium Berlin-Charlottenburg"
+  },
+  {
+    "region": "Berlin",
+    "school": "Realschule Berlin-Spandau"
+  },
+  {
+    "region": "Berlin",
+    "school": "Berufsschule Berlin-Wedding"
+  },
+  {
+    "region": "Berlin",
+    "school": "Oberschule Berlin-Pankow"
+  },
+  {
+    "region": "Berlin",
+    "school": "Gesamtschule Berlin-Marzahn"
+  },
+  {
+    "region": "Berlin",
+    "school": "Grundschule Berlin-Neukölln"
+  },
+  {
+    "region": "Berlin",
+    "school": "Gymnasium Berlin-Schöneberg"
+  }
+]

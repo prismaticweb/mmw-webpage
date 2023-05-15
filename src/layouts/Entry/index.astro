@@ -1,0 +1,54 @@
+---
+import "@styles/normalize.css";
+import * as themes from "@styles/themes.css";
+import * as styles from "./index.css";
+import { default as SEO, Props as SEOProps } from "./SEO.astro";
+import { default as Footer, Props as FooterProps } from "./Footer.astro";
+import { default as Header, Props as HeaderProps } from "./Header.astro";
+
+export type Props = {
+  description: string;
+  footer: FooterProps;
+  header: HeaderProps;
+  title: string;
+  url: string;
+  lang?: string;
+}
+
+const { description, footer, header, lang = "de", title, url } = Astro.props as Props;
+
+const seo: SEOProps = {
+  appName: "Prismatic Web",
+  canonical: "https://prismaticweb.io",
+  description,
+  title,
+  url
+}
+---
+<html class:list={[
+  themes.baseColorTheme,
+  themes.fontTheme,
+  themes.spaceTheme]}
+  lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    <SEO {...seo} />
+	</head>
+  <body class:list={[styles.body]}>
+    <Header />
+    <div id="before">
+      <slot name="before" />
+    </div>
+    <main id="main">
+      <slot />
+    </main>
+    <div id="after">
+      <slot name="after" />
+    </div>
+    <Footer />
+  </body>
+</html>

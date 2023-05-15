@@ -1,0 +1,33 @@
+---
+import * as styles from "./index.css";
+
+export type Props = {
+  steps: {
+    title: string;
+    description: string;
+    icon?: {
+      src: string;
+      alt: string;
+    };
+  }[];
+}
+
+const { steps } = Astro.props as Props;
+---
+
+<ol class={styles.stepper}>
+  {steps.map((step, i) => (
+    <li class={styles.step}>
+      <div class={styles.indicator}>
+        {step.icon ?
+          <img src={step.icon.src} alt={step.icon.src} width="64" height="64" />
+          : <span class={styles.indicatorNumber} set:text={i + 1} />}
+      </div>
+      <hgroup class={styles.hgroup}>
+        <p class={styles.stepIndicator} set:text={`Schritt ${i + 1}`} />
+        <h3 class={styles.title} set:text={step.title} />
+      </hgroup>
+      <p class={styles.description} set:html={step.description} />
+    </li>
+  ))
+</ol>

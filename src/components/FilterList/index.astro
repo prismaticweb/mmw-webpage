@@ -1,0 +1,36 @@
+---
+import * as styles from "./index.css";
+import locationList from "./locationList.json";
+
+import { FilterList } from "./island";
+import type { FilterListProps } from "./island";
+
+export type Props = {
+  filterList: {
+    region: string;
+    school: string;
+  }[];
+}
+
+function buildMap(list: Props["filterList"]) {
+  const res = new Map();
+ 
+  list.forEach(item => {
+    if(!res.has(item.region)) {
+      res.set(item.region, []);
+    }
+  });
+
+  list.forEach(item => {
+    res.get(item.region).push(item.school);
+  });
+
+  return res;
+}
+
+const { filterList } = Astro.props as Props;
+---
+
+<article class={styles.container}>
+  <FilterList source={buildMap(locationList)} client:idle />
+</article>
